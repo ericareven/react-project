@@ -1,9 +1,22 @@
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <header>
-            <h1>Grocery List</h1>
+            <h1>{title}</h1>
         </header>
     )
+}
+
+// same as:
+// const Header = (props) => {
+//     return (
+//         <header>
+//             <h1>{props.title}</h1>
+//         </header>
+//     )
+// }
+
+Header.defaultProps = {
+    title: "Default Title"
 }
 
 export default Header
